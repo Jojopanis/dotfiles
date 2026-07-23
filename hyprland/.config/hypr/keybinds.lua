@@ -10,7 +10,6 @@
 local terminal    = "kitty"
 local fileManager = "yazi"
 local menu        = "rofi -show drun -show-icons"
-local monitorChange = "~/.config/hypr/scripts/change.sh"
 
 local mainMod = "SUPER"
 
@@ -34,8 +33,8 @@ for i = 1, 10 do
 end
 hl.unbind(mainMod .. " + 1")
 hl.unbind(mainMod .. " + 2")
-hl.bind(mainMod .. " + 1", hl.dsp.exec_cmd(monitorChange .. " 1"))
-hl.bind(mainMod .. " + 2", hl.dsp.exec_cmd(monitorChange .. " 2"))
+hl.bind(mainMod .. " + 1", hl.dsp.focus({monitor = "DP-1"}))
+hl.bind(mainMod .. " + 2", hl.dsp.focus({monitor = "DP-2"}))
 
 -- Special workspaces
 hl.bind(mainMod .. " + D",         hl.dsp.workspace.toggle_special("discord"))
