@@ -23,8 +23,8 @@ hl.bind(mainMod .. " + mouse_down",  hl.dsp.layout('move -col'))
 hl.bind(mainMod .. " + L",  hl.dsp.layout('move +col'))
 hl.bind(mainMod .. " + H",  hl.dsp.layout('move -col'))
 
-hl.bind("SHIFT + mouse_up", hl.dsp.layout('swapcol l'))
-hl.bind("SHIFT + mouse_down", hl.dsp.layout('swapcol r'))
+hl.bind("SHIFT + mouse_up", hl.dsp.layout('swapcol r'))
+hl.bind("SHIFT + mouse_down", hl.dsp.layout('swapcol l'))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
