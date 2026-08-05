@@ -57,7 +57,8 @@ hl.monitor({
 hl.on("hyprland.start", function ()
   -- hl.exec_cmd("dunst")
   -- hl.exec_cmd("quickshell")
-  hl.exec_cmd("hyprpanel")
+  -- hl.exec_cmd("hyprpanel")
+  hl.exec_cmd("wayle shell")
 end)
 
 -------------------------------
@@ -177,6 +178,10 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
 -- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
 hl.workspace_rule({ workspace = "special:discord", on_created_empty = "vesktop" })
+hl.window_rule({
+  match = { initial_class= "Ganymede"},
+  float = true
+})
 -- hl.window_rule({
 --     name  = "no-gaps-wtv1",
 --     match = { float = false, workspace = "w[tv1]" },
