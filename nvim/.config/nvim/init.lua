@@ -1,6 +1,7 @@
 vim.opt.number					= true
 vim.opt.relativenumber	= true
 vim.opt.tabstop 				= 2
+vim.o.shiftwidth        = 0
 vim.opt.expandtab				= true
 vim.opt.signcolumn			= 'yes'
 vim.opt.clipboard       = 'unnamedplus'
@@ -17,16 +18,18 @@ vim.pack.add({
   { src = 'https://github.com/nvim-telescope/telescope.nvim' },
 	{ src = 'https://github.com/catgoose/nvim-colorizer.lua' },
 	{ src = 'https://github.com/catppuccin/nvim' },
+  { src = 'https://github.com/brianhuster/live-preview.nvim'},
 })
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = { 'lua_ls', 'pyright', 'html', 'cssls', 'ts_ls', 'qmlls'},
+	ensure_installed = { 'lua_ls', 'pyright', 'html', 'cssls', 'ts_ls', 'qmlls', 'emmet_language_server'},
 })
 require('catppuccin').setup({
 	flavour = 'frappe',
 })
 require('lualine').setup()
+require('live-preview').setup()
 
 vim.cmd.colorscheme "catppuccin"
 
