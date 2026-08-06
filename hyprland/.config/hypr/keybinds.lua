@@ -14,7 +14,7 @@ local menu        = "rofi -show drun -show-icons"
 local mainMod = "SUPER"
 
 -- Fullscreen --
-hl.bind(mainMod .. ' + F', hl.dsp.window.fullscreen({mode = 'maximized', action = 'toggle'}))
+hl.bind(mainMod .. ' + F', hl.dsp.layout("colresize +conf"))
 hl.bind(mainMod .. ' + SHIFT + F', hl.dsp.window.fullscreen({mode = 'fullscreen', action = 'toggle'}))
 
 -- Scrolling mode navigation
@@ -23,8 +23,11 @@ hl.bind(mainMod .. " + mouse_down",  hl.dsp.layout('move -col'))
 hl.bind(mainMod .. " + L",  hl.dsp.layout('move +col'))
 hl.bind(mainMod .. " + H",  hl.dsp.layout('move -col'))
 
-hl.bind("SHIFT + mouse_up", hl.dsp.layout('swapcol r'))
-hl.bind("SHIFT + mouse_down", hl.dsp.layout('swapcol l'))
+hl.bind(mainMod .. " + SHIFT + mouse_up", hl.dsp.layout('swapcol r'))
+hl.bind(mainMod .. " + SHIFT + mouse_down", hl.dsp.layout('swapcol l'))
+-- Scroll through existing workspaces with mainMod + scroll
+hl.bind(mainMod .. " + CTRL + mouse_up",   hl.dsp.focus({ workspace = "m-1" }))
+hl.bind(mainMod .. " + CTRL + mouse_down", hl.dsp.focus({ workspace = "m+1" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -43,9 +46,6 @@ hl.bind(mainMod .. " + D",         hl.dsp.workspace.toggle_special("discord"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:discord" }))
 -- Small windowrule to catch when vesktop opens in another workspace
 hl.window_rule({ match = {initial_class = "vesktop"}, workspace = "special:discord"})
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + CTRL + mouse_down", hl.dsp.focus({ workspace = "m+1" }))
-hl.bind(mainMod .. " + CTRL + mouse_up",   hl.dsp.focus({ workspace = "m-1" }))
 
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
