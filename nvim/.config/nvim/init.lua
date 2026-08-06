@@ -1,7 +1,8 @@
 vim.opt.number					= true
 vim.opt.relativenumber	= true
-vim.opt.tabstop 				= 2
-vim.o.shiftwidth        = 0
+vim.opt.tabstop 				= 8
+vim.o.shiftwidth        = 4
+vim.o.softtabstop       = -1
 vim.opt.expandtab				= true
 vim.opt.signcolumn			= 'yes'
 vim.opt.clipboard       = 'unnamedplus'
