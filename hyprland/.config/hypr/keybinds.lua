@@ -18,8 +18,8 @@ hl.bind(mainMod .. ' + F', hl.dsp.layout("colresize +conf"))
 hl.bind(mainMod .. ' + SHIFT + F', hl.dsp.window.fullscreen({mode = 'fullscreen', action = 'toggle'}))
 
 -- Scrolling mode navigation
-hl.bind(mainMod .. " + mouse_up",  hl.dsp.layout('move +col'))
-hl.bind(mainMod .. " + mouse_down",  hl.dsp.layout('move -col'))
+hl.bind(mainMod .. " + mouse_up",  hl.dsp.layout('move -col'))
+hl.bind(mainMod .. " + mouse_down",  hl.dsp.layout('move +col'))
 hl.bind(mainMod .. " + L",  hl.dsp.layout('move +col'))
 hl.bind(mainMod .. " + H",  hl.dsp.layout('move -col'))
 
