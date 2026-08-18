@@ -1,0 +1,29 @@
+[bar]
+scale = 0.8999999761581421
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "power",
+    "media",
+    "notifications",
+]
+center = [
+    "clock",
+    "custom-arch-updates",
+]
+right = [
+    "battery",
+    "bluetooth",
+    "systray",
+    "network",
+    "microphone",
+    "volume",
+]
+
+[modules.clock]
+format = "%a %d %b %H:%M"
+
+[modules.power]
+left-click = "poweroff"

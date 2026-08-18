@@ -1,0 +1,10 @@
+# Wayle configuration file
+[[modules.custom]]
+id = "arch-updates"
+command = "checkupdates | wc -l"
+interval-ms = 360000
+format = "{{output}}"
+icon-name = "tb-package"
+icon-bg-color = "yellow"
+label-color = "yellow"
+
