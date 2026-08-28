@@ -59,6 +59,7 @@ hl.on("hyprland.start", function ()
   -- hl.exec_cmd("quickshell")
   -- hl.exec_cmd("hyprpanel")
   hl.exec_cmd("wayle shell")
+  hl.exec_cmd("gammastep -l 50.6:5.0")
 end)
 
 -------------------------------
