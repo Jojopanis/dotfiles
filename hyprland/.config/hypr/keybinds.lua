@@ -46,6 +46,7 @@ hl.bind(mainMod .. " + D",         hl.dsp.workspace.toggle_special("discord"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:discord" }))
 -- Small windowrule to catch when vesktop opens in another workspace
 hl.window_rule({ match = {initial_class = "vesktop"}, workspace = "special:discord"})
+hl.bind("XF86Launch8", hl.dsp.send_shortcut({mods = "CTRL + SHIFT", key = "M", window = "class:^(vesktop)$"}))
 
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
